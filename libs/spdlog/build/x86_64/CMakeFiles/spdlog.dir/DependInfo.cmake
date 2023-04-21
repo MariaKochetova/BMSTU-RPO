@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/artem/libs/spdlog/spdlog/src/async.cpp" "CMakeFiles/spdlog.dir/src/async.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/async.cpp.o.d"
-  "/home/artem/libs/spdlog/spdlog/src/cfg.cpp" "CMakeFiles/spdlog.dir/src/cfg.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/cfg.cpp.o.d"
-  "/home/artem/libs/spdlog/spdlog/src/color_sinks.cpp" "CMakeFiles/spdlog.dir/src/color_sinks.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/color_sinks.cpp.o.d"
-  "/home/artem/libs/spdlog/spdlog/src/file_sinks.cpp" "CMakeFiles/spdlog.dir/src/file_sinks.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/file_sinks.cpp.o.d"
-  "/home/artem/libs/spdlog/spdlog/src/fmt.cpp" "CMakeFiles/spdlog.dir/src/fmt.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/fmt.cpp.o.d"
-  "/home/artem/libs/spdlog/spdlog/src/spdlog.cpp" "CMakeFiles/spdlog.dir/src/spdlog.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/spdlog.cpp.o.d"
-  "/home/artem/libs/spdlog/spdlog/src/stdout_sinks.cpp" "CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/spdlog/spdlog/src/async.cpp" "CMakeFiles/spdlog.dir/src/async.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/async.cpp.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/spdlog/spdlog/src/cfg.cpp" "CMakeFiles/spdlog.dir/src/cfg.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/cfg.cpp.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/spdlog/spdlog/src/color_sinks.cpp" "CMakeFiles/spdlog.dir/src/color_sinks.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/color_sinks.cpp.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/spdlog/spdlog/src/file_sinks.cpp" "CMakeFiles/spdlog.dir/src/file_sinks.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/file_sinks.cpp.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/spdlog/spdlog/src/fmt.cpp" "CMakeFiles/spdlog.dir/src/fmt.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/fmt.cpp.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/spdlog/spdlog/src/spdlog.cpp" "CMakeFiles/spdlog.dir/src/spdlog.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/spdlog.cpp.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/spdlog/spdlog/src/stdout_sinks.cpp" "CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o" "gcc" "CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o.d"
   )
 
 # Targets to which this target links.

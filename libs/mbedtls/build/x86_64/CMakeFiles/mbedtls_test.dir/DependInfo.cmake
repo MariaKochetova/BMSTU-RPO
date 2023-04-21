@@ -8,21 +8,21 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/asn1_helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/asn1_helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/asn1_helpers.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/certs.c" "CMakeFiles/mbedtls_test.dir/tests/src/certs.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/certs.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/drivers/hash.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/hash.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/hash.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/drivers/platform_builtin_keys.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/platform_builtin_keys.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/platform_builtin_keys.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_aead.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_aead.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_aead.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_cipher.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_cipher.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_cipher.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_key_management.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_key_management.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_key_management.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_mac.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_mac.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_mac.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_signature.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_signature.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_signature.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/fake_external_rng_for_test.c" "CMakeFiles/mbedtls_test.dir/tests/src/fake_external_rng_for_test.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/fake_external_rng_for_test.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/helpers.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/psa_crypto_helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/psa_crypto_helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/psa_crypto_helpers.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/psa_exercise_key.c" "CMakeFiles/mbedtls_test.dir/tests/src/psa_exercise_key.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/psa_exercise_key.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/random.c" "CMakeFiles/mbedtls_test.dir/tests/src/random.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/random.c.o.d"
-  "/home/artem/libs/mbedtls/mbedtls/tests/src/threading_helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/threading_helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/threading_helpers.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/asn1_helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/asn1_helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/asn1_helpers.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/certs.c" "CMakeFiles/mbedtls_test.dir/tests/src/certs.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/certs.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/drivers/hash.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/hash.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/hash.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/drivers/platform_builtin_keys.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/platform_builtin_keys.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/platform_builtin_keys.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_aead.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_aead.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_aead.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_cipher.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_cipher.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_cipher.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_key_management.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_key_management.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_key_management.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_mac.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_mac.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_mac.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/drivers/test_driver_signature.c" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_signature.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_signature.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/fake_external_rng_for_test.c" "CMakeFiles/mbedtls_test.dir/tests/src/fake_external_rng_for_test.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/fake_external_rng_for_test.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/helpers.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/psa_crypto_helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/psa_crypto_helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/psa_crypto_helpers.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/psa_exercise_key.c" "CMakeFiles/mbedtls_test.dir/tests/src/psa_exercise_key.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/psa_exercise_key.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/random.c" "CMakeFiles/mbedtls_test.dir/tests/src/random.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/random.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/tests/src/threading_helpers.c" "CMakeFiles/mbedtls_test.dir/tests/src/threading_helpers.c.o" "gcc" "CMakeFiles/mbedtls_test.dir/tests/src/threading_helpers.c.o.d"
   )
 
 # Targets to which this target links.

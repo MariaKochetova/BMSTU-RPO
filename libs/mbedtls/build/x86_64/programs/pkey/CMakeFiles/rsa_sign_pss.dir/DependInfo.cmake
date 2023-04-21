@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/artem/libs/mbedtls/mbedtls/programs/pkey/rsa_sign_pss.c" "programs/pkey/CMakeFiles/rsa_sign_pss.dir/rsa_sign_pss.c.o" "gcc" "programs/pkey/CMakeFiles/rsa_sign_pss.dir/rsa_sign_pss.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/programs/pkey/rsa_sign_pss.c" "programs/pkey/CMakeFiles/rsa_sign_pss.dir/rsa_sign_pss.c.o" "gcc" "programs/pkey/CMakeFiles/rsa_sign_pss.dir/rsa_sign_pss.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/artem/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedcrypto.dir/DependInfo.cmake"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedcrypto.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

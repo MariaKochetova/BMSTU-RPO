@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/artem/libs/mbedtls/mbedtls/programs/ssl/ssl_context_info.c" "programs/ssl/CMakeFiles/ssl_context_info.dir/ssl_context_info.c.o" "gcc" "programs/ssl/CMakeFiles/ssl_context_info.dir/ssl_context_info.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/programs/ssl/ssl_context_info.c" "programs/ssl/CMakeFiles/ssl_context_info.dir/ssl_context_info.c.o" "gcc" "programs/ssl/CMakeFiles/ssl_context_info.dir/ssl_context_info.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/artem/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedtls.dir/DependInfo.cmake"
-  "/home/artem/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedx509.dir/DependInfo.cmake"
-  "/home/artem/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedcrypto.dir/DependInfo.cmake"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedtls.dir/DependInfo.cmake"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedx509.dir/DependInfo.cmake"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/library/CMakeFiles/mbedcrypto.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

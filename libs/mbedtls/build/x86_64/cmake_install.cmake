@@ -1,4 +1,4 @@
-# Install script for directory: /home/artem/libs/mbedtls/mbedtls
+# Install script for directory: /home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/artem/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-objdump")
+  set(CMAKE_OBJDUMP "/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-objdump")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES
-    "/home/artem/libs/mbedtls/build/x86_64/cmake/MbedTLSConfig.cmake"
-    "/home/artem/libs/mbedtls/build/x86_64/cmake/MbedTLSConfigVersion.cmake"
+    "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/cmake/MbedTLSConfig.cmake"
+    "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/cmake/MbedTLSConfigVersion.cmake"
     )
 endif()
 
@@ -53,7 +53,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/MbedTLSTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/MbedTLSTargets.cmake"
-         "/home/artem/libs/mbedtls/build/x86_64/CMakeFiles/Export/cmake/MbedTLSTargets.cmake")
+         "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/CMakeFiles/Export/cmake/MbedTLSTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/MbedTLSTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -62,18 +62,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/artem/libs/mbedtls/build/x86_64/CMakeFiles/Export/cmake/MbedTLSTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/CMakeFiles/Export/cmake/MbedTLSTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/artem/libs/mbedtls/build/x86_64/CMakeFiles/Export/cmake/MbedTLSTargets-relwithdebinfo.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/CMakeFiles/Export/cmake/MbedTLSTargets-relwithdebinfo.cmake")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/artem/libs/mbedtls/build/x86_64/include/cmake_install.cmake")
-  include("/home/artem/libs/mbedtls/build/x86_64/3rdparty/cmake_install.cmake")
-  include("/home/artem/libs/mbedtls/build/x86_64/library/cmake_install.cmake")
-  include("/home/artem/libs/mbedtls/build/x86_64/programs/cmake_install.cmake")
+  include("/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/include/cmake_install.cmake")
+  include("/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/3rdparty/cmake_install.cmake")
+  include("/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/library/cmake_install.cmake")
+  include("/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/programs/cmake_install.cmake")
 
 endif()
 
@@ -85,5 +85,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/artem/libs/mbedtls/build/x86_64/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86_64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

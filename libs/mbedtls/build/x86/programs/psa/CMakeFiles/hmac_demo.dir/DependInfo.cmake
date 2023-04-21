@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/artem/libs/mbedtls/mbedtls/programs/psa/hmac_demo.c" "programs/psa/CMakeFiles/hmac_demo.dir/hmac_demo.c.o" "gcc" "programs/psa/CMakeFiles/hmac_demo.dir/hmac_demo.c.o.d"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/mbedtls/programs/psa/hmac_demo.c" "programs/psa/CMakeFiles/hmac_demo.dir/hmac_demo.c.o" "gcc" "programs/psa/CMakeFiles/hmac_demo.dir/hmac_demo.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/artem/libs/mbedtls/build/x86/library/CMakeFiles/mbedcrypto.dir/DependInfo.cmake"
+  "/home/aleksandr/AndroidStudioProjects/libs/mbedtls/build/x86/library/CMakeFiles/mbedcrypto.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
