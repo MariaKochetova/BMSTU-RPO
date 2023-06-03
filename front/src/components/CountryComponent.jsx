@@ -1,80 +1,93 @@
-import React, {Component, useEffect, useState} from 'react';
-import BackendService from '../services/BackendService';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faChevronLeft, faSave} from '@fortawesome/fontawesome-free-solid';
-import {alertActions} from "../utils/Rdx";
-import {connect} from "react-redux";
+import React, {useEffect, useState} from "react";
+import BackendService from "../services/BackendService";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import{faChevronLeft, faSave} from "@fortawesome/free-solid-svg-icons";
 import {Form} from "react-bootstrap";
-import {useNavigate, useParams} from "react-router-dom";
+import { useParams, useNavigate } from 'react-router-dom';
 
 const CountryComponent = props => {
-    const params = useParams();
-    const [id, setId] = useState(params.id);
-    const [name, setName] = useState("");
+
     const [hidden, setHidden] = useState(false);
     const navigate = useNavigate();
+    const [name, setName] = useState("")
+    const [id, setId] = useState(useParams().id)
 
-    useEffect(() => {
-        if (parseInt(id) !== -1) {
-            BackendService.retrieveCountry(id)
-                .then((resp) => {
-                    setName(resp.data.name)
-                })
-                .catch(() => setHidden(true))
-        }
-    }, []); // [] нужны для вызова useEffect только один раз при инициализации компонента
-    // это нужно для того, чтобы в состояние name каждый раз не записывалось значение из БД
+    const updateName = (event) => {
+        setName(event.target.value)
+    }
 
     const onSubmit = (event) => {
         event.preventDefault();
         event.stopPropagation();
         let err = null;
-        if (!name) err = "Название страны должно быть указано";
-        if (err) props.dispatch(alertActions.error(err));
-        let country = {id, name};
-
-        if (parseInt(country.id) === -1) {
-            BackendService.createCountry(country)
-                .then(() => navigate(`/countries`))
-                .catch(() => {
-                })
-        } else {
-            BackendService.updateCountry(country)
-                .then(() => navigate(`/countries`))
-                .catch(() => {
-                })
+        if (name === ""){
+            err = "Название страны должно быть указано"
         }
+        let countr = {name: name, id: id}
+        if (parseInt(id) === -1) {
+            countr.id = Math.floor(Math.random() * 100);
+            BackendService.createCountry(countr)
+                .catch(()=>{})
+        }
+        else {
+            BackendService.updateCountry(countr)
+                .catch(()=>{})
+        }
+        navigateToCountries()
+    }
+
+    const refreshCountry = () => {
+        BackendService.retrieveCountry(id)
+            .then(
+                resp => {
+                    setName(resp.data.name);
+                    setHidden(false);
+                }
+            )
+            .catch(()=> {
+                setHidden(true);
+            });
+    }
+
+    useEffect(() => {
+        refreshCountry();
+    });
+
+    const navigateToCountries = () => {
+        navigate('/countries')
     }
 
     if (hidden)
         return null;
     return (
         <div className="m-4">
-            <div className=" row my-2 mr-0">
+            <div className="row my-2 mr-0">
                 <h3>Страна</h3>
-                <button className="btn btn-outline-secondary ml-auto"
-                        onClick={() => navigate(`/countries`)}
-                ><FontAwesomeIcon icon={faChevronLeft}/>{' '}Назад</button>
+                <button
+                    className="btn btn-outline-secondary ml-auto"
+                    onClick={() => navigateToCountries() }><FontAwesomeIcon
+                    icon={faChevronLeft}/>{' '}Назад</button>
             </div>
             <Form onSubmit={onSubmit}>
                 <Form.Group>
                     <Form.Label>Название</Form.Label>
+
                     <Form.Control
-                           type="text"
-                           placeholder="Введите название страны"
-                           onChange={(e) => {setName(e.target.value)}}
-                           value={name}
-                           name="name"
-                           autoComplete="off"
-                    />
+                        type="text"
+                        placeholder="Введите название страны"
+                        onChange={updateName}
+                        value={name}
+                        name="name"
+                        autoComplete="off"/>
                 </Form.Group>
-                <button className="btn btn-outline-secondary" type="submit">
-                    <FontAwesomeIcon icon={faSave}/>{' '}
-                    Сохранить
-                </button>
+                <button
+                    className="btn btn-outline-secondary"
+                    type="submit"><FontAwesomeIcon
+                    icon={faSave}/>{' '}Сохранить</button>
             </Form>
         </div>
     )
+
 }
 
-export default connect()(CountryComponent);
+export default CountryComponent;

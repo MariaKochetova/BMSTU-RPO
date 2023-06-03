@@ -1,9 +1,8 @@
-import {combineReducers} from "redux";
-import {configureStore} from "@reduxjs/toolkit";
 import Utils from "./Utils";
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import { createLogger } from 'redux-logger'
 
-/* ACTIONS */
-
+/** ACTIONS */
 const userConstants = {
     LOGIN: 'USER_LOGIN',
     LOGOUT: 'USER_LOGOUT',
@@ -14,8 +13,8 @@ const alertConstants = {
     CLEAR: 'CLEAR',
 };
 
-/* ACTION GENERATORS */
 
+/** ACTION GENERATORS */
 export const userActions = {
     login,
     logout
@@ -31,10 +30,11 @@ function logout() {
     return { type: userConstants.LOGOUT }
 }
 
+
 export const alertActions = {
     error,
     clear
-}
+};
 
 function error(msg) {
     return { type: alertConstants.ERROR, msg }
@@ -44,7 +44,8 @@ function clear() {
     return { type: alertConstants.CLEAR }
 }
 
-/* REDUCERS */
+
+/* REDUСERS */
 
 let user =  Utils.getUser()
 const initialState = user ? { user } : {}
@@ -79,4 +80,10 @@ const rootReducer = combineReducers({
     authentication, alert
 });
 
-export const store = configureStore({ reducer: rootReducer });
+const loggerMiddleware = createLogger();
+
+export const store = createStore(
+    rootReducer,
+    applyMiddleware(loggerMiddleware)
+);
+

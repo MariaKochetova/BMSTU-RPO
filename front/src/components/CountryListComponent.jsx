@@ -4,6 +4,8 @@ import { faTrash, faEdit, faPlus } from '@fortawesome/free-solid-svg-icons'
 import Alert from './Alert'
 import BackendService from "../services/BackendService";
 import { useNavigate } from 'react-router-dom';
+import PaginationComponent from "./PaginationComponent";
+
 
 const CountryListComponent = props => {
 
@@ -13,6 +15,9 @@ const CountryListComponent = props => {
     const [show_alert, setShowAlert] = useState(false);
     const [checkedItems, setCheckedItems] = useState([]);
     const [hidden, setHidden] = useState(false);
+    const [page, setPage] = useState(0);
+    const [totalCount, setTotalCount] = useState(0);
+    const limit = 2;
     const navigate = useNavigate();
 
     const setChecked = v =>  {
@@ -42,7 +47,7 @@ const CountryListComponent = props => {
             return 0
         });
         if (x.length > 0) {
-            var msg;
+            let msg;
             if (x.length > 1) {
                 msg = "Пожалуйста подтвердите удаление " + x.length + " стран";
             }
@@ -55,19 +60,25 @@ const CountryListComponent = props => {
         }
     }
 
-    const refreshCountries = () => {
-        BackendService.retrieveAllCountries()
-        .then(
-            resp => {
-                setCountries(resp.data);
-                setHidden(false);
+    const refreshCountries = cp => {
+        BackendService.retrieveAllCountries(cp, limit)
+            .then(
+                resp => {
+                    setCountries(resp.data.content);
+                    setHidden(false);
+                    setTotalCount(resp.data.totalElements);
+                    setPage(cp);
+                }
+            )
+            .catch(()=> {
+                setHidden(true );
+                setTotalCount(0);
             })
-        .catch(()=> { setHidden(true )})
-        .finally(()=> setChecked(false))
+            .finally(() => setChecked(false))
     }
 
     useEffect(() => {
-        refreshCountries();
+        refreshCountries(page);
     }, [])
 
     const updateCountryClicked = id => {
@@ -76,8 +87,13 @@ const CountryListComponent = props => {
 
     const onDelete = () =>  {
         BackendService.deleteCountries(selectedCountries)
-        .then( () => refreshCountries())
-        .catch(()=>{})
+            .then(() => refreshCountries(page))
+            .catch(()=>{}
+            )
+    }
+
+    const onPageChanged = cp => {
+        refreshCountries(cp - 1)
     }
 
     const closeAlert = () => {
@@ -97,65 +113,70 @@ const CountryListComponent = props => {
                 <div className="btn-toolbar">
                     <div className="btn-group ms-auto">
                         <button className="btn btn-outline-secondary"
-                            onClick={addCountryClicked}>
+                                onClick={addCountryClicked}>
                             <FontAwesomeIcon icon={faPlus} />{' '}Добавить
                         </button>
                     </div>
                     <div className="btn-group ms-2">
                         <button className="btn btn-outline-secondary"
-                            onClick={deleteCountriesClicked}>
+                                onClick={deleteCountriesClicked}>
                             <FontAwesomeIcon icon={faTrash} />{' '}Удалить
                         </button>
                     </div>
                 </div>
             </div>
             <div className="row my-2 me-0">
+                <PaginationComponent
+                    totalRecords={totalCount}
+                    pageLimit={limit}
+                    pageNeighbours={1}
+                    onPageChanged={onPageChanged} />
                 <table className="table table-sm">
                     <thead className="thead-light">
-                        <tr>
-                            <th>Название</th>
-                            <th>
-                                <div className="btn-toolbar pb-1">
-                                    <div className="btn-group  ms-auto">
-                                        <input type="checkbox" onChange={handleGroupCheckChange} />
-                                    </div>
+                    <tr>
+                        <th>Название</th>
+                        <th>
+                            <div className="btn-toolbar pb-1">
+                                <div className="btn-group  ms-auto">
+                                    <input type="checkbox" onChange={handleGroupCheckChange} />
                                 </div>
-                            </th>
-                        </tr>
+                            </div>
+                        </th>
+                    </tr>
                     </thead>
                     <tbody>
-                        {
-                            countries && countries.map((country, index) =>
+                    {
+                        countries && countries.map((country, index) =>
                             <tr key={country.id}>
                                 <td>{country.name}</td>
                                 <td>
                                     <div className="btn-toolbar">
                                         <div className="btn-group  ms-auto">
                                             <button className="btn btn-outline-secondary btn-sm btn-toolbar"
-                                                onClick={() =>
-                                                updateCountryClicked(country.id)}>
+                                                    onClick={() =>
+                                                        updateCountryClicked(country.id)}>
                                                 <FontAwesomeIcon icon={faEdit} fixedWidth />
                                             </button>
                                         </div>
                                         <div className="btn-group  ms-2  mt-1">
                                             <input type="checkbox" name={index}
-                                                checked={checkedItems.length> index ?  checkedItems[index] : false}
-                                                onChange={handleCheckChange}/>
+                                                   checked={checkedItems.length> index ?  checkedItems[index] : false}
+                                                   onChange={handleCheckChange}/>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                         )
-                        }
+                    }
                     </tbody>
                 </table>
             </div>
             <Alert title="Удаление"
-                message={message}
-                ok={onDelete}
-                close={closeAlert}
-                modal={show_alert}
-                cancelButton={true} />
+                   message={message}
+                   ok={onDelete}
+                   close={closeAlert}
+                   modal={show_alert}
+                   cancelButton={true} />
         </div>
     )
 }

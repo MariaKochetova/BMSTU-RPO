@@ -1,17 +1,19 @@
+import {connect} from 'react-redux';
 import React, {useState} from 'react';
 import BackendService from '../services/BackendService';
 import Utils from "../utils/Utils";
 import {useNavigate} from "react-router-dom";
 import {userActions} from "../utils/Rdx";
-import {connect, useDispatch} from "react-redux";
+import { useDispatch } from 'react-redux';
 
-export default connect() (function  Login() {
+export default connect()(function  Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [loggingIn, setLoggingIn] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const nav = useNavigate();
     const dispatch = useDispatch();
+
 
     function handleChangeLogin(e) {
         setUsername(e.target.value);
@@ -26,11 +28,11 @@ export default connect() (function  Login() {
         setSubmitted(true);
         setLoggingIn(true);
         BackendService.login(username, password)
-            .then ( resp => {
+            .then (resp => {
                 console.log(resp.data);
-                dispatch(userActions.login(resp.data));
                 Utils.saveUser(resp.data);
                 setLoggingIn(false);
+                dispatch(userActions.login(resp.data))
                 nav("/home");
             })
             .catch( err => {
@@ -40,8 +42,6 @@ export default connect() (function  Login() {
 
     return  (
         <div className="col-md-6 me-0">
-{/*             {error_message && */}
-{/*                 <div className="alert alert-danger mt-1 me-0 ms-0">{error_message}</div>} */}
             <h2>Вход</h2>
             <form name="form" onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -69,4 +69,4 @@ export default connect() (function  Login() {
             </form>
         </div>
     );
-})
+});
